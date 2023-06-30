@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+:root{
+  --logoFont: 'Lilita One', cursive;
+  --capHeadingFont: 'Gentium Plus', serif;
+  --paraFont: 'Mulish', sans-serif;
+  --paraBoldFont: 'Lato', sans-serif;
+  --buttonFont: 'Rubik', sans-serif;
+  /* --primaryColor: rgb(75, 138, 75); */
+  --primaryColor: #1E7341;
+  --cericeColor: #B22222;
+  --doreColor: #FFD700;
+  --noireColor: #333333;
+  --box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.3);
+  --text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+  --primaryFontColor: color: rgb(100, 96, 96); 
+}
+
+body{
+  font-family: var(--paraFont);
+  color: var(--primaryFontColor);
+}
+
+.d-flex{
+  display: flex;
+}
+
+.d-flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-sbetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pd{
+  padding: 2rem 2%;
+}
+
+/* ------ NAVBAR ------- */
+.nav-top{
+  background-color: var(--primaryColor);
+}
+
+.logo{
+  font-size: 2.5rem;
+  font-family: var(--logoFont);
+  color: #fff;
+}
+
+.nav-top-btn a{
+  font-size: 1.6rem;
+  font-family: var(--paraBoldFont);
+  margin-right: 4rem;
+  color: #fff;
+  font-weight: bolder;
+
+}
+
+.nav-top-btn a:last-child{
+  margin-right: 0;
+  color: #000;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .2rem;
+  transition: color ease;
+}
+
+.nav-top-btn a:hover:last-child{
+  color: var(--primaryColor);
+}
+
+.nav-bottom{
+  /* border-bottom: .2rem solid #eee; */
+  box-shadow: var(--box-shadow);
+}
+
+.nav-bottom a{
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-family: var(--paraBoldFont);
+  color: var(--primaryFontColor);
+  transition: all ease;
+}
+
+.nav-bottom a:hover{
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+
+
+/* Blog */
+h1 {
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.post {
+  background-color: #f3e4a0;
+  border: 1px solid #2e1414;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.post h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.post h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.comment {
+  border-top: 1px solid #0f0f01f5;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.comment p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Rest of the original CSS code */
+
+/* Add your additional CSS code here */

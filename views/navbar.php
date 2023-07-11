@@ -9,12 +9,12 @@
     </div>
 
     <div class="nav-bottom pd d-flex-sbetween">
-        <a href="#">Nos Produits</a>
+        <a href="?p=viewproducts">Nos Produits</a>
         <a href="#">Qui somme nous?</a>
         <a href="#">Nouveautés</a>
         <a href="#">Nos Actions</a>
         <a href="#">Temoignages</a>
-        <a href="index.php?p=blog">Blog</a>
+        <a href="?p=blog">Blog</a>
         <a href="#">Les Qeros</a>
         <a href="#">Le Perou</a>
     </div>

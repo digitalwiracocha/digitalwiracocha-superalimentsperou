@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,77 +7,75 @@
   list-style: none;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
-:root{
+:root {
   --logoFont: 'Lilita One', cursive;
   --capHeadingFont: 'Gentium Plus', serif;
   --paraFont: 'Mulish', sans-serif;
   --paraBoldFont: 'Lato', sans-serif;
   --buttonFont: 'Rubik', sans-serif;
-  /* --primaryColor: rgb(75, 138, 75); */
   --primaryColor: #1E7341;
   --cericeColor: #B22222;
   --doreColor: #FFD700;
   --noireColor: #333333;
   --box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.3);
   --text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
-  --primaryFontColor: color: rgb(100, 96, 96); 
+  --primaryFontColor: rgb(100, 96, 96); 
 }
 
-body{
+body {
   font-family: var(--paraFont);
   color: var(--primaryFontColor);
 }
 
-.d-flex{
+.d-flex {
   display: flex;
 }
 
-.d-flex-col{
+.d-flex-col {
   display: flex;
   flex-direction: column;
 }
 
-.d-flex-center{
+.d-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.d-flex-sbetween{
+.d-flex-sbetween {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.pd{
+.pd {
   padding: 2rem 2%;
 }
 
 /* ------ NAVBAR ------- */
-.nav-top{
+.nav-top {
   background-color: var(--primaryColor);
 }
 
-.logo{
+.logo {
   font-size: 2.5rem;
   font-family: var(--logoFont);
   color: #fff;
 }
 
-.nav-top-btn a{
+.nav-top-btn a {
   font-size: 1.6rem;
   font-family: var(--paraBoldFont);
   margin-right: 4rem;
   color: #fff;
   font-weight: bolder;
-
 }
 
-.nav-top-btn a:last-child{
+.nav-top-btn a:last-child {
   margin-right: 0;
   color: #000;
   background-color: #fff;
@@ -86,16 +84,15 @@ body{
   transition: color ease;
 }
 
-.nav-top-btn a:hover:last-child{
+.nav-top-btn a:hover:last-child {
   color: var(--primaryColor);
 }
 
-.nav-bottom{
-  /* border-bottom: .2rem solid #eee; */
+.nav-bottom {
   box-shadow: var(--box-shadow);
 }
 
-.nav-bottom a{
+.nav-bottom a {
   font-size: 1.6rem;
   font-weight: bolder;
   font-family: var(--paraBoldFont);
@@ -103,12 +100,10 @@ body{
   transition: all ease;
 }
 
-.nav-bottom a:hover{
+.nav-bottom a:hover {
   font-weight: 700;
   color: var(--primaryColor);
 }
-
-
 
 /* Blog */
 h1 {
@@ -117,7 +112,7 @@ h1 {
   text-align: center;
 }
 
-.blog-post {
+.container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
@@ -156,6 +151,28 @@ h1 {
   margin-bottom: 5px;
 }
 
-/* Rest of the original CSS code */
+.center {
+  text-align: center;
+}
 
-/* Add your additional CSS code here */
+aside {
+  padding: 20px;
+  background-color: #f3e4a0;
+  border: 1px solid #2e1414;
+  border-radius: 5px;
+}
+
+aside h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+aside ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}

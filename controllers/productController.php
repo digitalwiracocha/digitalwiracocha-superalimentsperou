@@ -1,7 +1,8 @@
 <?php
+require_once 'models/Product/productManager.Class.php';
 // Vérification du formulaire soumis
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (!empty($_POST["action"]) && $_POST["action"] === "addProduit") {
+    if (!empty($_POST["action"]) && $_POST["action"] === "addproduct") {
         // Récupération des données du formulaire
         $nomProduit = $_POST["nom"];
         $description = $_POST["description"];
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if (!is_null($idProduit)) {
                     $produit = $produitManager->getProduitById($idProduit);
                     if (!is_null($produit)) {
-                        include "views/produitDetail.php";
+                        include "views/Product/productDetail.php";
                         exit; 
                 } else {
                     // Gestion des erreurs lors de la création du produit

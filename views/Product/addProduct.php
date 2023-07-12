@@ -1,9 +1,9 @@
 <?php
-$date = date("Y-m-d");
+$date = date("Y-m-d H:i:s");
 ?>
 <!-- Formulaire -->
 <form method="POST" action="" enctype="multipart/form-data" class="p-f-nav">
-    <input type="hidden" name="action" value="addProduit">
+    <input type="hidden" name="action" value="addproduct">
     <label for="nom">Nom du produit:</label><br>
     <input type="text" name="nom" id="nom" required><br>
     <label for="description">Description:</label><br>

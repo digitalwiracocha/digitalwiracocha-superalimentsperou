@@ -13,12 +13,12 @@
         <a href="?p=viewproducts">Produits</a>
             <a href="?p=viewtestimonies">Temoignages</a>
                 <a href="?p=viewposts">Le Blog</a>
-                    <a href="views/Content/NOS_VOYAGES.php">Voyages</a>
-                        <a href="views/Content/LES_QEROS.php">Les Qeros</a>
-                            <a href="views/Content/LE_PEROU.php">Le Perou</a>
-                                 <a href="views/Content/LA_COMMUNAUTE.php">Qui somme nous?</a>
-                                    <a href="views/Content/NOS_ACTIONS.php">Engagements</a>
-                                        <a href="?p=blog">NewsLetter</a>
+                    <a href="?p=voyages">Voyages</a>
+                        <a href="?p=qeros">Les Qeros</a>
+                            <a href="?p=perou">Le Perou</a>
+                                 <a href="?p=about">Qui somme nous?</a>
+                                    <a href="?p=engagement">Engagements</a>
+                                        <a href="?p=viewposts">NewsLetter</a>
     </div>
 </nav>
 

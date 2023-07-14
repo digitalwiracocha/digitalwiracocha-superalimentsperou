@@ -3,6 +3,7 @@ require_once "models/model.Class.php";
 require_once "models/Product/productManager.Class.php";
 require_once "models/Testimony/testimonyManager.Class.php";
 require_once "models/Post/postManager.Class.php";
+require_once "models/Order/orderManager.Class.php";
 
 $p = $_GET["p"] ?? "";
 
@@ -21,6 +22,10 @@ $postManager = new PostManager();
 $postManager->loadAllPosts();
 $posts = $postManager->getAllPosts();
 
+$orderManager = new OrderManager();
+$orderManager->loadAllOrders();
+$orders = $orderManager->getAllOrders();
+
 switch ($p) {
     case "home":
     case "index":
@@ -32,9 +37,39 @@ switch ($p) {
         include "assets/admin.php";
         break;
 
-    case "cf":
+    case "cfp":
         include "assets/cfp.php";
         break;
+// application "Order"//
+
+    case "vieworders": // liste des commandes //
+    case "orders":
+        include "views/Order/ordersList.php";
+        break;
+        
+        case "vieworder": // détail d'une commande //
+            $orderId = $_GET['id'] ?? null;
+            if (!empty($orderId)) {
+                $order = $orderManager->getOrderById($orderId);
+                if (!is_null($order)) {
+                    include "views/Order/orderDetail.php";
+                } else {
+                    echo "Order not found";
+                }
+            } else {
+                echo "Invalid ID";
+            }
+            break;
+            
+            case "addorder": // ajouter une commande //
+                case "order":
+                    case "command":
+                        case "comand":
+                include "controllers/orderController.php";
+                include "views/Order/addOrder.php";
+                break;
+
+
 
     // application "Product"//
 
@@ -113,6 +148,28 @@ switch ($p) {
         include "views/Post/addPost.php";
         break;
 
+// pages statiques //
+
+        case "perou":
+            include "views/Static/perou.php";
+            break;
+
+            case "qeros":
+                include "views/Static/qeros.php";
+                break;
+
+
+                case "voyages":
+                    include "views/Static/voyages.php";
+                    break;
+
+                    case "engagement":
+                        include "views/Static/engagement.php";
+                        break;
+                        
+                        case "about":
+                            include "views/Static/about.php";
+                            break;
     default:
         echo "Page not found";
         break;

@@ -1,5 +1,6 @@
 <?php
-class Product
+require_once "assets/helpers.php";
+class Product extends MetaTags
 {
     private $id_produit;
     private $date_creation;
@@ -10,6 +11,7 @@ class Product
   
     public function __construct($id_produit, $date_creation, $nom_produit, $description, $prix_vente, $image_path)
     {
+        parent::__construct($balisetitle, $metaDescription, $metaKeywords);
         $this->id_produit = $id_produit;
         $this->date_creation = $date_creation;
         $this->nom_produit = $nom_produit;
@@ -84,19 +86,19 @@ class Product
         $this->prix_vente = $prix_vente;
     }
     
-        public function createSummary($maxLength = 100) {
-            $description = $this->getDescription();
-            if (strlen($description) <= $maxLength) {
-                return $description;
-            } else {
-                $summary = substr($description, 0, $maxLength);
-                $lastSpacePos = strrpos($summary, ' ');
-                if ($lastSpacePos !== false) {
-                    $summary = substr($summary, 0, $lastSpacePos);
-                }
-                return $summary . '...';
-            }
-        }
+        // public function createSummary($maxLength = 100) {
+        //     $description = $this->getDescription();
+        //     if (strlen($description) <= $maxLength) {
+        //         return $description;
+        //     } else {
+        //         $summary = substr($description, 0, $maxLength);
+        //         $lastSpacePos = strrpos($summary, ' ');
+        //         if ($lastSpacePos !== false) {
+        //             $summary = substr($summary, 0, $lastSpacePos);
+        //         }
+        //         return $summary . '...';
+        //     }
+        // }
     }
     
         // ...

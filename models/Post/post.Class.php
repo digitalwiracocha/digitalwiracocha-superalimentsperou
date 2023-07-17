@@ -1,5 +1,6 @@
 <?php
-class Post
+require_once "assets/helpers.php";
+class Post extends MetaTags
 {
     private $id_post;
     private $date_creation;
@@ -66,17 +67,17 @@ class Post
         $this->description = $description;
     }
 
-    public function createSummary($maxLength = 100) {
-        $description = $this->getDescription();
-        if (strlen($description) <= $maxLength) {
-            return $description;
-        } else {
-            $summary = substr($description, 0, $maxLength);
-            $lastSpacePos = strrpos($summary, ' ');
-            if ($lastSpacePos !== false) {
-                $summary = substr($summary, 0, $lastSpacePos);
-            }
-            return $summary . '...';
-        }
-    }
+    // public function createSummary($maxLength = 200) {
+    //     $description = $this->getDescription();
+    //     if (strlen($description) <= $maxLength) {
+    //         return $description;
+    //     } else {
+    //         $summary = substr($description, 0, $maxLength);
+    //         $lastSpacePos = strrpos($summary, ' ');
+    //         if ($lastSpacePos !== false) {
+    //             $summary = substr($summary, 0, $lastSpacePos);
+    //         }
+    //         return $summary . '...';
+    //     }
+    // }
 }

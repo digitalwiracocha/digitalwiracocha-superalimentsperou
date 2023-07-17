@@ -1,5 +1,7 @@
 <?php
-class Testimony
+require_once "assets/helpers.php";
+
+class Testimony extends MetaTags
 {
     private $id;
     private $titre; // Ensure this property exists
@@ -65,17 +67,17 @@ class Testimony
         $this->description = $description;
     }
 
-    public function createSummary($maxLength = 100) {
-        $description = $this->getDescription();
-        if (strlen($description) <= $maxLength) {
-            return $description;
-        } else {
-            $summary = substr($description, 0, $maxLength);
-            $lastSpacePos = strrpos($summary, ' ');
-            if ($lastSpacePos !== false) {
-                $summary = substr($summary, 0, $lastSpacePos);
-            }
-            return $summary . '...';
-        }
-    }
+    // public function createSummary($maxLength = 200) {
+    //     $description = $this->getDescription();
+    //     if (strlen($description) <= $maxLength) {
+    //         return $description;
+    //     } else {
+    //         $summary = substr($description, 0, $maxLength);
+    //         $lastSpacePos = strrpos($summary, ' ');
+    //         if ($lastSpacePos !== false) {
+    //             $summary = substr($summary, 0, $lastSpacePos);
+    //         }
+    //         return $summary . '...';
+    //     }
+    // }
 }

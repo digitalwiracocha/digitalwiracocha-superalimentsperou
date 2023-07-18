@@ -1,6 +1,6 @@
 <?php
 require_once "assets/helpers.php";
-class Post extends MetaTags
+class Post 
 {
     private $id_post;
     private $date_creation;

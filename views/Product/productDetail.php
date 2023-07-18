@@ -1,3 +1,4 @@
+
 <body class="is-preload">
 
 <!-- Wrapper -->
@@ -22,11 +23,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><?= $produit->getId() ?></td>
-                            <td><?= $produit->getNomProduit() ?></td>
-                            <td><?= $produit->getDescription() ?></td>
-                            <td><?= $produit->getPrixVente() ?></td>
-                            <td><img src="<?= $produit->getImagePath() ?>" alt="Image du produit"></td>
+                            <td><?= $product->getId() ?></td>
+                            <td><?= $product->getNomProduit() ?></td>
+                            <td><?= $product->getDescription() ?></td>
+                            <td><?= $product->getPrixVente() ?></td>
+                            <td><img src="<?= $product->getImagePath() ?>" alt="Image du produit"></td>
                         </tr>
                     </tbody>
                 </table>

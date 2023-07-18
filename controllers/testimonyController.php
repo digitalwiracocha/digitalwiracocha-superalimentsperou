@@ -21,23 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // File has been uploaded successfully, you can continue processing
 
                 // Record the testimony in the database with the image path
-                $temoignagesManager = new TestimonyManager();
-                $idTemoignage = $temoignagesManager->createNewTestimony($titre, $description, $destination);
+                $testimoniesManager = new TestimonyManager();
+                $idTemoignage = $testimoniesManager->createNewTestimony($titre, $description, $destination);
 
                 if (!is_null($idTemoignage)) {
-                    $temoignage = $temoignagesManager->getTestimonyById($idTemoignage);
-                    if (!is_null($temoignage)) {
+                    $testimony = $testimoniesManager->getTestimonyById($idTemoignage);
+                    if (!is_null($testimony)) {
                         include "views/Testimony/testimonyDetail.php";
                         exit; 
                     } else {
-                        // Error handling during product creation
+                        // Error handling - testimony not found
                     }
+                } else {
+                    // Error handling - testimony creation failed
                 }
-            } else {
-                // An error occurred during file upload
             }
-        } else {
-            // Mandatory fields are missing
         }
     }
 }

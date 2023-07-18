@@ -26,6 +26,7 @@
                                 <td><a href="?p=viewpost&id=<?= $post->getId() ?>"><?= $post->getTitre() ?></a></td>
                                <td><?= $post->getDescription() ?></td>
                                 <td><?= $post->getDateCreation() ?></td>
+                                <td><img src="<?= $post->getImagePath() ?>" alt="Image du produit"></td>
                             </tr>
                         <?php } ?>
                     </tbody>

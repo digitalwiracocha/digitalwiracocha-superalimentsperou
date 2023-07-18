@@ -15,8 +15,8 @@
     <div class="d-flex-col footer-links">
         <a href="#">Service Clients</a>
         <a href="#">Nous Contacter</a>
-        <a href="#">Question fréquentes</a>
-        <a href="#">L'avis de nos clients</a>
+        <a href="?p=faq">Question fréquentes</a>
+        <a href="?p=viewtestimonies">L'avis de nos clients</a>
     </div>
     <div class="d-flex-col">
         <form class="m-b" method="post">

@@ -1,7 +1,7 @@
 <?php
 require_once "assets/helpers.php";
 
-class Testimony extends MetaTags
+class Testimony
 {
     private $id;
     private $titre; // Ensure this property exists

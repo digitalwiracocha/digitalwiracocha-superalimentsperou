@@ -171,6 +171,22 @@ body{
   color: red;
 }
 
+.message-succes {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message-erreur {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 /* ------ NAVBAR ------- */
 .navbar{
   position: fixed;
@@ -280,6 +296,13 @@ body{
   color: var(--primaryColor);
   font-size: 2rem;
   margin-right: 2rem;
+}
+
+.image-redimensionnee {
+  max-width: 200px; /* Largeur maximale souhaitée */
+  max-height: 150px; /* Hauteur maximale souhaitée */
+  width: auto;
+  height: auto;
 }
 
 .a-btn{

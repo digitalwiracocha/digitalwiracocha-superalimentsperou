@@ -15,6 +15,8 @@
                             <th>Titre</th>
                             <th>Description</th>
                             <th>Date de création</th>
+                            <th>Image</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +25,7 @@
                             <td><?= $testimony->getTitre() ?></td>
                             <td><?= $testimony->getDescription() ?></td>
                             <td><?= $testimony->getDateCreation() ?></td>
+                            <td><img src="<?= $testimony->getImagePath() ?>" alt="Testimony Image"></td>
                         </tr>
                     </tbody>
                 </table>
